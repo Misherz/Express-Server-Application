@@ -6,6 +6,37 @@ import { users } from '../data/users.mjs'
 
 //Put  it into a variable to export
 let router = express.Router();
+router.use(express.json());
+
+//GET
+router.get('/', (req, res) => {
+    res.json(users);
+
+});
+
+//POST
+
+// Middleware to parse JSON data
+router.post('/', (req, res) => {
+    if (req.body.name && req.body.username && req.body.id) {
+    const userData = {
+        name: req.body.name,
+        username: req.body.username,
+        id: req.body.id + 1,
+    };
+
+    users.push(userData)
+    res.send('User created!');
+    
+}else {
+    res.status(400).send('Missing required fields');
+}
+});
+
+//put
+
+//del
+
 
 
 //export
