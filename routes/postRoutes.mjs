@@ -30,8 +30,35 @@ router.post('/', (req, res) => {
     res.status(400).send('Missing required fields');
 }
 });
+
+
 //put
+router.patch('/:date', (req, res, next) => {
+    const post = posts.find((p, i) => {
+      if (p.date == req.params.date) {
+        for (const key in req.body) {
+          posts[i][key] = req.body[key];
+        }
+        return true;
+      }
+    });
+  
+    if (post) res.json(post);
+    else next();
+  });
+
 
 //del
+router.delete('/:date', (req, res, next) => {
+    const post = posts.find((p, i) => {
+      if (p.date == req.params.date) {
+        users.splice(i, 1);
+        return true;
+      }
+    });
+  
+    if (post) res.json(post);
+    else next();
+  });
 //export
 export default router

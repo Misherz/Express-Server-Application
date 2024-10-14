@@ -30,10 +30,33 @@ router.post('/', (req, res) => {
     res.status(400).send('Missing required fields');
 }
 });
-//put
+
+router.patch('/:year', (req, res, next) => {
+    const music1 = music.find((m, i) => {
+      if (m.date == req.params.year) {
+        for (const key in req.body) {
+          music[i][key] = req.body[key];
+        }
+        return true;
+      }
+    });
+  
+    if (music) res.json(music);
+    else next();
+  });
 
 
-//delete
-
+//del
+router.delete('/:year', (req, res, next) => {
+    const music1 = music.find((m, i) => {
+      if (m.year == req.params.year) {
+        music.splice(i, 1);
+        return true;
+      }
+    });
+  
+    if (music) res.json(music);
+    else next();
+  });
 //export
 export default router
