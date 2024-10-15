@@ -9,6 +9,9 @@ import musicRoutes from './routes/musicRoutes.mjs'
 //import pug for template use
 import pug from "pug";
 
+//import body parser
+import bodyParser from 'body-parser';
+
 
 //Create an instance/Initialize Express in a variable
 const app = express();
@@ -18,7 +21,10 @@ const PORT = 5000;
 app.use(express.static('./styles'));
 app.use(express.static('./imgs/'));
 
+
 //Middleware
+app.arguments(bodyParser.urlencoded({extended: true}));
+app.arguments(bodyParser.json({extended: true}));
 
 //Logging middleware to keep track out routes during testing
 function keepTrack(req, res, next) {

@@ -23,3 +23,4 @@
 
 
 ### Note:
+    CSS applied on home page.
