@@ -9,5 +9,23 @@ html(lang="en")
     p1= 'Time to face the music; I treble at the thought.Why did the music teacher go to jail? Because she got caught with too many sharp notes! Why did the music teacher go to jail? Because she got caught with too many sharp notes! Why do musicians get locked out of their houses? Because they forgot their keys!What do you call a fish that plays piano? A tuna!'
     br
     a(href="./users", class="button") Users
+    br
     a(href="./posts", class="button") Content 
+    br
     a(href="./music", class="button") Music Faves
+    fieldset 
+      h2  Update Resource
+      form(action="input", method="post")
+       label(for="resource-select") Choose a resource:
+        select#resource-select(name="resource")
+          option(value="Users") Users
+          option(value="Music") Music
+          option(value="Content") Content
+        br
+        br
+        label(for="EnterData") Resource Name:
+        br
+        textarea(type="text", name="resourceData", placeholder="Enter info")
+        br
+        input(type="submit", value="Update Resource") 
+    
