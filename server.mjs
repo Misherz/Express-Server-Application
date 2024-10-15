@@ -6,6 +6,11 @@ import userRoutes from './routes/userRoutes.mjs'
 import postRoutes from './routes/postRoutes.mjs'
 import musicRoutes from './routes/musicRoutes.mjs'
 
+//import pug for template use
+import pug from "pug";
+
+
+
 
 //Create an instance/Initialize Express in a variable
 const app = express();
@@ -21,15 +26,16 @@ function keepTrack(req, res, next) {
 
 app.use(keepTrack)
 
-
-//Route
+//setting view engine
+app.set('view engine', 'pug');
+app.set('views', './views')
 
 app.get('/', (req, res) => {
-    res.send(`Home Page`);
+    res.render('homepg');
+    // res.send(`Home Page`);
 });
 
-
-
+//Route
 //Routes with app.use
 app.use('/users', userRoutes);
 app.use('/posts', postRoutes);

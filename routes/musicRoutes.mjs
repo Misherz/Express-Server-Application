@@ -31,6 +31,8 @@ router.post('/', (req, res) => {
 }
 });
 
+
+// patch
 router.patch('/:year', (req, res, next) => {
     const music1 = music.find((m, i) => {
       if (m.date == req.params.year) {
@@ -58,5 +60,8 @@ router.delete('/:year', (req, res, next) => {
     if (music) res.json(music);
     else next();
   });
+
+
+
 //export
 export default router
