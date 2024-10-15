@@ -23,8 +23,8 @@ app.use(express.static('./imgs/'));
 
 
 //Middleware
-app.arguments(bodyParser.urlencoded({extended: true}));
-app.arguments(bodyParser.json({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ extended: true }));
 
 //Logging middleware to keep track out routes during testing
 function keepTrack(req, res, next) {
