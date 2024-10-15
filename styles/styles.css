@@ -1,13 +1,44 @@
 body {
     background-image: url('../imgs/Musical_BKG.jpg');
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1{
+   font-size: 3em;
+   color: #251f0d;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   background-color: #aed5c2;
+   border: none; 
+   border-radius: 7px; 
+   text-decoration: none; 
+   text-align: center;
+   transition: background-color 0.3s;    
 
 }
 
-a{
+p{
+    color: #251f0d;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
 
-    background-color: antiquewhite;
-    border: solid 3px burlywood;
-    margin: 2px;
-    padding: 2px;
+a{
+    display: inline-block;
+    padding: 10px 20px; 
+    margin: 10px; 
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    background-color: #168f52;
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+a:hover{
+    background-color: #c09209;
 }
