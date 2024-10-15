@@ -1,7 +1,7 @@
 # SBA Project: Javascript Web App
 ### Description: 
     Music space for musicians
-
+    Band Manager's view
 
 ### Technologies Used :
     Per Scholas Slides

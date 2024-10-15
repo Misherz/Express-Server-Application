@@ -1,0 +1,13 @@
+body {
+    background-image: url('../imgs/Musical_BKG.jpg');
+    object-fit: cover;
+
+}
+
+a{
+
+    background-color: antiquewhite;
+    border: solid 4px burlywood;
+    margin: 2px;
+    padding: 2px;
+}
