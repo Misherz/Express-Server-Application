@@ -1,8 +1,5 @@
 body {
     background-image: url('../imgs/Musical_BKG.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 h1{
@@ -42,4 +39,14 @@ a{
 
 a:hover{
     background-color: #c09209;
+}
+
+fieldset{
+    border: none;
+    background-color: #aed5c2;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    max-width: 25%;
+    border-radius: 5px; 
+    padding: 20px 30px; 
+    margin: 10px 20px 20px 10px; 
 }
